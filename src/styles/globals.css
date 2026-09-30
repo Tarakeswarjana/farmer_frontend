@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2f7d32;
+  --color-primary-dark: #1b5e20;
+  --color-primary-light: #e8f5e9;
+  --color-cream: #fffdf5;
+  --color-earth: #795548;
+  --color-ink: #1a241b;
+  --color-muted: #5f6b62;
+  --color-surface: #ffffff;
+  --color-line: #e4eadf;
+  color-scheme: light;
+}
+
+.dark {
+  --color-primary: #81c784;
+  --color-primary-dark: #c8e6c9;
+  --color-primary-light: #1b3320;
+  --color-cream: #101510;
+  --color-earth: #bcaaa4;
+  --color-ink: #f3f7f1;
+  --color-muted: #b7c2b8;
+  --color-surface: #182018;
+  --color-line: #2c3a2e;
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), "Noto Sans Bengali", sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.farmer-ui {
+  font-size: 1.0625rem;
+}
+
+.farmer-ui button,
+.farmer-ui a,
+.farmer-ui input,
+.farmer-ui select {
+  min-height: 3rem;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-card;
+  }
+}
